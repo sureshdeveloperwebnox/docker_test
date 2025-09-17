@@ -30,7 +30,7 @@ jobs:
           script: |
             cd ~/docker_test
             git pull || true   # in case repo already exists
-            docker build -t my-app .
-            docker stop my-app || true
-            docker rm my-app || true
-            docker run -d --name my-app -p 80:80 my-app
+            docker build -t docker_test .
+            docker stop docker_test || true
+            docker rm docker_test || true
+            docker run -d --name docker_test -p 80:80 docker_test
